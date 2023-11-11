@@ -113,13 +113,17 @@ class _HomescreenState extends State<Homescreen> {
                   SizedBox(height: 10,),
                   Row(
                     children: [
-                      InkWell(child: Container(height: 50,width: 50,decoration: BoxDecoration(color: const Color.fromARGB(255, 157, 221, 159),borderRadius: BorderRadius.circular(20)),)),
+                      InkWell(child: Container(height: 50,width: 50,decoration: BoxDecoration(color: Color.fromARGB(255, 107, 230, 111),borderRadius: BorderRadius.circular(20)),)),
                       SizedBox(width: 15,),
                        InkWell(child: Container(height: 50,width: 50,decoration: BoxDecoration(color: Color.fromARGB(255, 243, 173, 62),borderRadius: BorderRadius.circular(20)),)),
                        SizedBox(width: 15,),
                         InkWell(child: Container(height: 50,width: 50,decoration: BoxDecoration(color: Color.fromARGB(255, 123, 218, 237),borderRadius: BorderRadius.circular(20)),)),
                          SizedBox(width: 15,),
                         InkWell(child: Container(height: 50,width: 50,decoration: BoxDecoration(color: Color.fromARGB(255, 236, 146, 202),borderRadius: BorderRadius.circular(20)),)),
+                         SizedBox(width: 15,),
+                        InkWell(child: Container(height: 50,width: 50,decoration: BoxDecoration(color: Color.fromARGB(255, 240, 96, 96),borderRadius: BorderRadius.circular(20)),)),
+                         SizedBox(width: 15,),
+                        InkWell(child: Container(height: 50,width: 50,decoration: BoxDecoration(color: Color.fromARGB(255, 172, 76, 227),borderRadius: BorderRadius.circular(20)),)),
                         
                     ],
                   ),
