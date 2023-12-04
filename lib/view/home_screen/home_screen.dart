@@ -169,6 +169,7 @@ class _HomescreenState extends State<Homescreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color.fromARGB(255, 8, 227, 125),
         onPressed: () {
           value = "submit";
           selectedIndex = null;
@@ -176,7 +177,6 @@ class _HomescreenState extends State<Homescreen> {
         },
         child: Icon(
           Icons.add,
-          color: Color.fromARGB(255, 8, 227, 125),
         ),
       ),
     );
