@@ -76,7 +76,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w100,
                   ),
                 ),
               ),
@@ -89,7 +89,6 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                 child: Text(
                   widget.date ?? "",
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
                     fontSize: 15,
                     color: Colors.black,
                   ),

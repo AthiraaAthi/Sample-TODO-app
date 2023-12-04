@@ -44,8 +44,11 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ToDo"),
-        backgroundColor: Color.fromARGB(255, 8, 227, 125),
+        title: Text(
+          "ToDo",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Color.fromARGB(255, 65, 224, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -169,13 +172,16 @@ class _HomescreenState extends State<Homescreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromARGB(255, 8, 227, 125),
+        backgroundColor: Color.fromARGB(255, 65, 224, 71),
         onPressed: () {
           value = "submit";
           selectedIndex = null;
           bottomSheet(context);
         },
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
       ),
     );
   }
