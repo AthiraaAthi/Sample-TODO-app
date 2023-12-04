@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_15_/model/note_model/note_model.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+
+//import '../../../model/note_model/note_model.dart';
 
 class HomeScreenWidget extends StatefulWidget {
+  var box = Hive.box<NoteModel>("MyTodoBox");
   HomeScreenWidget(
       {super.key,
       required this.title,
@@ -36,9 +41,10 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                 Text(
                   widget.title,
                   style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold),
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Row(
                   children: [
@@ -68,22 +74,25 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                 child: Text(
                   widget.description,
                   style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],
           ),
-          Column(
+          Row(
             children: [
-              Positioned(
-                top: 0,
-                bottom: 10,
-                right: 20,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  "",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  widget.date ?? "",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ],
