@@ -3,6 +3,7 @@ import 'package:flutter_application_15_/model/note_model/note_model.dart';
 
 import 'package:flutter_application_15_/view/home_screen/homescreen_widget/homescreen_widget.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:intl/intl.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -244,9 +245,34 @@ class _HomescreenState extends State<Homescreen> {
                     child: TextField(
                       controller: dateController,
                       decoration: InputDecoration(
+                        icon: Padding(
+                          padding: const EdgeInsets.only(right: 0),
+                          child: Icon(Icons.calendar_month),
+                        ),
                         border: OutlineInputBorder(),
                         hintText: "date",
                       ),
+                      readOnly: true,
+                      onTap: () async {
+                        DateTime? pickedDate = await showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(2101));
+                        if (pickedDate != null) {
+                          print("picked Date:$pickedDate");
+                          String formattedDate =
+                              DateFormat("yyyy-MM-dd").format(pickedDate);
+                          print("formatted Date:$formattedDate");
+                          setState(() {
+                            dateController.text = formattedDate;
+                          });
+                        } else {
+                          SnackBar(
+                            content: Text("Select Date"),
+                          );
+                        }
+                      },
                     ),
                   ),
                   SizedBox(
